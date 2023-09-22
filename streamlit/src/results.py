@@ -15,6 +15,7 @@ from functionforDownloadButtons import download_button
 
 from PIL import Image
 
+
 ###################################
 
 def app():
@@ -44,8 +45,10 @@ def app():
     st.text("ESC4R: Project is trained on ")
     st.table(closest_results[['project_name']])
     
-
-    image = Image.open('combined_algorithm_spread.png')
+    #image = Image.open('../images/combined_algorithm_spread.png')
+    import os
+    print(os.getcwd())
+    image = Image.open(os.getcwd() + '/streamlit/src/combined_algorithm_spread.png')
 
     st.image(image, caption='Algorithm Visualisation') 
 

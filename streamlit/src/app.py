@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 
 from multipage import MultiPage
-from pages import run_pipeline, results # import your pages here
+import run_pipeline, results # import your pages here
 
 # Create an instance of the app 
 app = MultiPage()
