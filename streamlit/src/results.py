@@ -65,7 +65,7 @@ def app():
     gb.configure_selection(selection_mode="multiple", use_checkbox=True)
     #gb.configure_side_bar()  # side_bar is clearly a typo :) should by sidebar
     #gb.configure_auto_height(10)
-    gb.configure_pagination()
+    gb.configure_pagination(paginationPageSize=10)
     
     gridOptions = gb.build()
 
