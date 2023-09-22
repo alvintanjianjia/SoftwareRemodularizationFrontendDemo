@@ -22,6 +22,8 @@ def app():
 
     st.markdown("**For demonstrative purposes only. Results displayed are exclusively representative of Dropwizard, owing to the constrained capabilities of online public hosting services, irrespective of the input URL.**")
 
+    st.markdown("**Please consult the following link: https://github.com/alvintanjianjia/SoftwareRemodularization, for detailed instructions on how to effectively utilize the End-to-End tool to facilitate your refactoring endeavors. Should you have any inquiries or concerns, we kindly encourage you to reach out via email to alvin.tan@monash.edu or chong.chunyong@monash.edu.**")
+
     user_github_link = st.text_input('GitHub URL', '')
     if validators.url(user_github_link) is True and 'github' in user_github_link:
         if st.button('Run Tool.'):
@@ -38,7 +40,7 @@ def app():
     else:
         st.info(
             f"""
-                👆 Please input a valid Github URL.
+                👆 Please input https://github.com/dropwizard/dropwizard as the Github URL.
                 """
         )
 
