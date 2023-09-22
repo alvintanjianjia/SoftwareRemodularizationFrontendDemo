@@ -45,7 +45,7 @@ def app():
     st.table(closest_results[['project_name']])
     
 
-    image = Image.open('../images/combined_algorithm_spread.png')
+    image = Image.open('combined_algorithm_spread.png')
 
     st.image(image, caption='Algorithm Visualisation') 
 
