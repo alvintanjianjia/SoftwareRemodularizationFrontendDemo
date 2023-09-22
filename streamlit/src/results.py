@@ -57,8 +57,8 @@ def app():
     from st_aggrid import GridUpdateMode, DataReturnMode
     shows = pd.read_csv('pipeline_prediction_output.csv')
     shows = shows.astype(object)
-    shows = shows[['predicted_time','class_name','refactor_destination','class']]
-    gb = GridOptionsBuilder.from_dataframe(shows[['predicted_time','class_name','refactor_destination','class']])
+    shows = shows[['predicted_time', 'class_name', 'file', 'class', 'Current_Package', 'New_Destination_Package']]
+    gb = GridOptionsBuilder.from_dataframe(shows[['predicted_time', 'class_name', 'file', 'class', 'Current_Package', 'New_Destination_Package']])
     
     # enables pivoting on all columns, however i'd need to change ag grid to allow export of pivoted/grouped data, however it select/filters groups
     gb.configure_default_column(enablePivot=True, enableValue=True, enableRowGroup=True)
