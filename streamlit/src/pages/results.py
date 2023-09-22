@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import csv
 
 ###################################
 from st_aggrid import AgGrid
@@ -54,6 +53,7 @@ def app():
 
     from st_aggrid import GridUpdateMode, DataReturnMode
     shows = pd.read_csv('pipeline_prediction_output.csv')
+    shows = shows.astype(object)
     shows = shows[['predicted_time','class_name','refactor_destination','class']]
     gb = GridOptionsBuilder.from_dataframe(shows[['predicted_time','class_name','refactor_destination','class']])
     
@@ -80,6 +80,7 @@ def app():
     )
 
     df = pd.DataFrame(response["selected_rows"])
+    df = df.astype(object)
 
     st.subheader("Filtered data will appear below 👇 ")
     st.text("")
