@@ -64,6 +64,7 @@ def app():
     gb.configure_default_column(enablePivot=True, enableValue=True, enableRowGroup=True)
     gb.configure_selection(selection_mode="multiple", use_checkbox=True)
     gb.configure_side_bar()  # side_bar is clearly a typo :) should by sidebar
+    gb.configure_auto_height()
     #gb.configure_columns()
     gridOptions = gb.build()
 
